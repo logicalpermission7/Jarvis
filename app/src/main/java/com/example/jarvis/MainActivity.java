@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         textViewTyper= findViewById(R.id.textViewTyper);
         textViewRainBow= findViewById(R.id.textViewRainBow);
 
-        arrMessages1.add("Hello, I am a built-in, voice-controlled personal assistant. I was designed to offer you a seamless way of interacting with your phone. Click on the button above to start me up.");
+        arrMessages1.add("Hello, I am a built-in, voice-controlled personal assistant. I was designed to offer you a seamless way of interacting with your phone. I use voice queries and a natural-language user interface to answer questions, make recommendations, and perform actions by delegating requests to a set of Internet services. Click on the button above to begin.");
         arrMessages2.add("J.A.R.V.I.S.");
         textViewTyper.animateText(arrMessages1.get(position));
         textViewRainBow.animateText(arrMessages2.get(position));
