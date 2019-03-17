@@ -29,23 +29,38 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="73dp"
         android:layout_marginLeft="73dp"
-        android:layout_marginTop="253dp"
+        android:layout_marginTop="152dp"
         android:layout_marginEnd="76dp"
         android:layout_marginRight="76dp"
-        android:layout_marginBottom="226dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/jarvis_2"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/bg"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.219"
+        app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.0" />
 
 
 <RelativeLayout
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     tools:ignore="MissingConstraints">
+
+
+    <com.hanks.htextview.rainbow.RainbowTextView
+        android:id="@+id/textViewRainBow"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:text=""
+        android:textSize="60sp"
+        app:colorSpace="150dp"
+        app:colorSpeed="4dp" />
+
+
 
 
     <com.hanks.htextview.typer.TyperTextView
@@ -67,6 +82,8 @@
         app:typerSpeed="80" />
 
 </RelativeLayout>
+
+
 
 
 </android.support.constraint.ConstraintLayout>
