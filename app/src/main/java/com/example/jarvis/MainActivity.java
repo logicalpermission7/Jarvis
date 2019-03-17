@@ -11,6 +11,8 @@ import android.widget.Button;
 import com.hanks.htextview.base.HTextView;
 import java.util.ArrayList;
 import android.os.Handler;
+import android.support.v7.app.AlertDialog;
+import android.content.DialogInterface;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -29,10 +31,6 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<String> Messages1 = new ArrayList<>();
     ArrayList<String> Messages2 = new ArrayList<>();
     int position=0;
-
-
-
-
 
 
 
@@ -93,13 +91,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-
-
-
-
-
-
         final Button startButton = findViewById(R.id.start_button);
         startButton.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -116,19 +107,42 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
 
 
-        }
+
+
+
+
     private void jarvis(){
         Intent intent = new Intent(getApplicationContext(),
                 JarvisMain.class);
         startActivity(intent);
 
 
+    }
 
 
+    public void onBackPressed() {
+        new AlertDialog.Builder(this)
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .setTitle("Exit App")
+                .setMessage("Are you sure you want to exit jarvis?")
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
 
+                        //super.onBackPressed();
+                        //Or used finish();
+                        finish();
+                        mediaPlayer.stop();
+                    }
 
+                })
+                .setNegativeButton("No", null)
+                .show();
 
     }
+
+
 }
