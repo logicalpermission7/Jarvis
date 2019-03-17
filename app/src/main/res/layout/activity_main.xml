@@ -47,18 +47,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.029" />
+        app:layout_constraintVertical_bias="0.646" />
 
 
     <com.hanks.htextview.typer.TyperTextView
         android:id="@+id/textViewTyper"
-        android:layout_width="387dp"
-        android:layout_height="198dp"
+        android:layout_width="390dp"
+        android:layout_height="80dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="464dp"
         android:gravity="center"
         android:text=""
         android:textColor="#4dffff"
@@ -66,6 +66,7 @@
         app:charIncrease="3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:typerSpeed="80" />
 

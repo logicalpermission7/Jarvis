@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private MediaPlayer mediaPlayer;
     private MediaState mediaState;
     private HTextView textViewTyper, textViewRainBow;
-    int delay = 20000; //milliseconds
+    int delay = 5000; //milliseconds
     Handler handler;
     ArrayList<String> arrMessages1 = new ArrayList<>();
     ArrayList<String> arrMessages2 = new ArrayList<>();
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         textViewTyper= findViewById(R.id.textViewTyper);
         textViewRainBow= findViewById(R.id.textViewRainBow);
 
-        arrMessages1.add("Hello, I am a built-in, voice-controlled personal assistant. I was designed to offer you a seamless way of interacting with your phone. I use voice queries and a natural-language user interface to answer questions, make recommendations, and perform actions by delegating requests to a set of Internet services. Click on the button above to begin.");
+        arrMessages1.add("Hello World, You're Welcome!");
         arrMessages2.add("J.A.R.V.I.S.");
         textViewTyper.animateText(arrMessages1.get(position));
         textViewRainBow.animateText(arrMessages2.get(position));
@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
         //----------sound end--------------------------------------------------
 
 
-        /* Change Messages every 20 Seconds */
+        /* Change Messages every 10 Seconds */
         handler = new Handler();
         handler.postDelayed(new Runnable(){
             public void run(){
