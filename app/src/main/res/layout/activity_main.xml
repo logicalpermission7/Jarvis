@@ -10,22 +10,26 @@
 
     <ImageView
         android:id="@+id/bg"
-        android:layout_width="410dp"
-        android:layout_height="754dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginRight="1dp"
+        android:layout_width="434dp"
+        android:layout_height="683dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:layout_marginBottom="332dp"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toStartOf="@+id/relativeLayout"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/window4" />
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/hud" />
 
     <Button
         android:id="@+id/start_button"
-        android:layout_width="225dp"
-        android:layout_height="211dp"
+        android:layout_width="249dp"
+        android:layout_height="242dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
@@ -38,56 +42,66 @@
         android:layout_marginEnd="76dp"
         android:layout_marginRight="76dp"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/jarvis_2"
+        android:background="@drawable/button1"
         app:layout_constraintBottom_toBottomOf="@+id/bg"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.117" />
 
 
-<RelativeLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    tools:ignore="MissingConstraints">
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
 
 
-    <com.hanks.htextview.rainbow.RainbowTextView
-        android:id="@+id/textViewRainBow"
-        android:layout_width="match_parent"
-        android:layout_height="125dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:gravity="center"
-        android:text=""
-        android:textSize="60sp"
-        app:colorSpace="150dp"
-        app:colorSpeed="4dp" />
+        <com.hanks.htextview.rainbow.RainbowTextView
+            android:id="@+id/textViewRainBow"
+            android:layout_width="317dp"
+            android:layout_height="98dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="55dp"
+            android:layout_marginLeft="55dp"
+            android:layout_marginTop="59dp"
+            android:layout_marginEnd="39dp"
+            android:layout_marginRight="39dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:text=""
+            android:textSize="50sp"
+            app:colorSpace="150dp"
+            app:colorSpeed="4dp" />
+
+        <com.hanks.htextview.typer.TyperTextView
+            android:id="@+id/textViewTyper"
+            android:layout_width="wrap_content"
+            android:layout_height="251dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginEnd="41dp"
+            android:layout_marginRight="41dp"
+            android:layout_marginBottom="0dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="#ADD8E6"
+            android:textSize="20sp"
+            app:charIncrease="3"
+            app:typerSpeed="80" />
 
 
-    <com.hanks.htextview.typer.TyperTextView
-        android:id="@+id/textViewTyper"
-        android:layout_width="match_parent"
-        android:layout_height="116dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginRight="0dp"
-        android:layout_marginBottom="90dp"
-        android:gravity="center"
-        android:text=""
-        android:textColor="#ADD8E6"
-        android:textSize="20sp"
-        app:charIncrease="3"
-        app:typerSpeed="80" />
-
-</RelativeLayout>
+    </RelativeLayout>
 
 
 
