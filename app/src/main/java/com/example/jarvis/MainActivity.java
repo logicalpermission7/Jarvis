@@ -8,6 +8,10 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import com.hanks.htextview.base.HTextView;
+import java.util.ArrayList;
+import android.os.Handler;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,6 +23,13 @@ public class MainActivity extends AppCompatActivity {
 
     private MediaPlayer mediaPlayer;
     private MediaState mediaState;
+    private HTextView textViewTyper;
+    int delay = 20000; //milliseconds
+    Handler handler;
+    ArrayList<String> arrMessages = new ArrayList<>();
+    int position=0;
+
+
 
 
 
@@ -31,6 +42,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+        textViewTyper= findViewById(R.id.textViewTyper);
+
+        arrMessages.add("Hello, World. I am the best built-in, voice-controlled personal assistant. I was designed to offer you a seamless way of interacting with your phone. Click on the button above to start me up.");
+        textViewTyper.animateText(arrMessages.get(position));
 
         //----------Getting the sound file prepared into memory and getting it prepared to play
 
@@ -55,8 +71,20 @@ public class MainActivity extends AppCompatActivity {
         }else if(mediaState == MediaState.STOPPED){
             mediaPlayer.prepareAsync();
         }
+        //----------sound end--------------------------------------------------
 
 
+        /* Change Messages every 20 Seconds */
+        handler = new Handler();
+        handler.postDelayed(new Runnable(){
+            public void run(){
+
+                handler.postDelayed(this, delay);
+                if(position>=arrMessages.size())
+                    position=0;
+                textViewTyper.animateText(arrMessages.get(position));
+            }
+        }, delay);
 
 
 
