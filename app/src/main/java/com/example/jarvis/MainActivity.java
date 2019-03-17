@@ -26,8 +26,8 @@ public class MainActivity extends AppCompatActivity {
     private HTextView textViewTyper, textViewRainBow;
     int delay = 5000; //milliseconds
     Handler handler;
-    ArrayList<String> arrMessages1 = new ArrayList<>();
-    ArrayList<String> arrMessages2 = new ArrayList<>();
+    ArrayList<String> Messages1 = new ArrayList<>();
+    ArrayList<String> Messages2 = new ArrayList<>();
     int position=0;
 
 
@@ -47,10 +47,10 @@ public class MainActivity extends AppCompatActivity {
         textViewTyper= findViewById(R.id.textViewTyper);
         textViewRainBow= findViewById(R.id.textViewRainBow);
 
-        arrMessages1.add("Hello World, You're Welcome!");
-        arrMessages2.add("J.A.R.V.I.S.");
-        textViewTyper.animateText(arrMessages1.get(position));
-        textViewRainBow.animateText(arrMessages2.get(position));
+        Messages1.add("Hello World, You're Welcome!");
+        Messages2.add("J.A.R.V.I.S.");
+        textViewTyper.animateText(Messages1.get(position));
+        textViewRainBow.animateText(Messages2.get(position));
 
         //----------Getting the sound file prepared into memory and getting it prepared to play
 
@@ -78,16 +78,16 @@ public class MainActivity extends AppCompatActivity {
         //----------sound end--------------------------------------------------
 
 
-        /* Change Messages every 10 Seconds */
+        /* Change Messages every 5 Seconds */
         handler = new Handler();
         handler.postDelayed(new Runnable(){
             public void run(){
 
                 handler.postDelayed(this, delay);
-                if(position>=arrMessages1.size())
+                if(position>=Messages1.size())
                     position=0;
-                textViewRainBow.animateText(arrMessages2.get(position));
-                textViewTyper.animateText(arrMessages1.get(position));
+                textViewRainBow.animateText(Messages2.get(position));
+                textViewTyper.animateText(Messages1.get(position));
             }
         }, delay);
 
