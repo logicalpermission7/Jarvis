@@ -4,18 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff"
+    android:background="#000000"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/bg"
-        android:layout_width="412dp"
-        android:layout_height="871dp"
-        android:scaleType="centerCrop"
+        android:layout_width="410dp"
+        android:layout_height="784dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="332dp"
+        android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/hud" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/window4" />
 
     <Button
         android:id="@+id/start_button"
@@ -61,22 +66,23 @@
         app:colorSpeed="4dp" />
 
 
-
-
     <com.hanks.htextview.typer.TyperTextView
         android:id="@+id/textViewTyper"
         android:layout_width="match_parent"
-        android:layout_height="118dp"
-        android:layout_alignParentTop="true"
+        android:layout_height="135dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="427dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
         android:layout_marginEnd="0dp"
         android:layout_marginRight="0dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="90dp"
         android:gravity="center"
         android:text=""
-        android:textColor="#add8e6 "
+        android:textColor="#ADD8E6"
         android:textSize="20sp"
         app:charIncrease="3"
         app:typerSpeed="80" />
