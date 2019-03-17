@@ -23,10 +23,11 @@ public class MainActivity extends AppCompatActivity {
 
     private MediaPlayer mediaPlayer;
     private MediaState mediaState;
-    private HTextView textViewTyper;
+    private HTextView textViewTyper, textViewRainBow;
     int delay = 20000; //milliseconds
     Handler handler;
-    ArrayList<String> arrMessages = new ArrayList<>();
+    ArrayList<String> arrMessages1 = new ArrayList<>();
+    ArrayList<String> arrMessages2 = new ArrayList<>();
     int position=0;
 
 
@@ -44,9 +45,12 @@ public class MainActivity extends AppCompatActivity {
 
 
         textViewTyper= findViewById(R.id.textViewTyper);
+        textViewRainBow= findViewById(R.id.textViewRainBow);
 
-        arrMessages.add("Hello, World. I am the best built-in, voice-controlled personal assistant. I was designed to offer you a seamless way of interacting with your phone. Click on the button above to start me up.");
-        textViewTyper.animateText(arrMessages.get(position));
+        arrMessages1.add("Hello, I am a built-in, voice-controlled personal assistant. I was designed to offer you a seamless way of interacting with your phone. Click on the button above to start me up.");
+        arrMessages2.add("J.A.R.V.I.S.");
+        textViewTyper.animateText(arrMessages1.get(position));
+        textViewRainBow.animateText(arrMessages2.get(position));
 
         //----------Getting the sound file prepared into memory and getting it prepared to play
 
@@ -80,9 +84,10 @@ public class MainActivity extends AppCompatActivity {
             public void run(){
 
                 handler.postDelayed(this, delay);
-                if(position>=arrMessages.size())
+                if(position>=arrMessages1.size())
                     position=0;
-                textViewTyper.animateText(arrMessages.get(position));
+                textViewRainBow.animateText(arrMessages2.get(position));
+                textViewTyper.animateText(arrMessages1.get(position));
             }
         }, delay);
 
