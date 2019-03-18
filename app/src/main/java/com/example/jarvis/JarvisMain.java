@@ -1,4 +1,10 @@
 package com.example.jarvis;
 
-public class JarvisMain {
+
+import android.support.v7.app.AppCompatActivity;
+
+
+public class JarvisMain extends AppCompatActivity {
+
+
 }
