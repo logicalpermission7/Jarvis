@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        playAudio();
 
         textViewTyper= findViewById(R.id.textViewTyper);
         textViewRainBow= findViewById(R.id.textViewRainBow);
@@ -49,31 +50,6 @@ public class MainActivity extends AppCompatActivity {
         Messages2.add("J.A.R.V.I.S.");
         textViewTyper.animateText(Messages1.get(position));
         textViewRainBow.animateText(Messages2.get(position));
-
-        //----------Getting the sound file prepared into memory and getting it prepared to play
-
-        if (mediaPlayer == null){
-            mediaState = mediaState.NOT_READY;
-            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.alian_welding);
-            mediaPlayer.setLooping(true);
-
-            mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-                @Override
-                public void onPrepared(MediaPlayer mp) {
-                    mediaPlayer.start();
-                    mediaState = mediaState.PLAYING;
-
-                }
-
-            });
-
-        }else if(mediaState == MediaState.PAUSED){
-            mediaPlayer.start();
-            mediaState = mediaState.PLAYING;
-        }else if(mediaState == MediaState.STOPPED){
-            mediaPlayer.prepareAsync();
-        }
-        //----------sound end--------------------------------------------------
 
 
         /* Change Messages every 5 Seconds */
@@ -101,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
                 MyBounceInterpolator interpolator = new MyBounceInterpolator(0.5, 30);
                 myAnim.setInterpolator(interpolator);
                 startButton.startAnimation(myAnim);
-                mediaPlayer.stop();
+                stopAudio();
                 jarvis();
 
             }
@@ -110,6 +86,52 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        stopAudio();
+    }
+
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        playAudio();
+    }
+
+    private void stopAudio(){
+
+        if(mediaPlayer != null){
+            mediaPlayer.stop();
+            mediaState = mediaState.STOPPED;
+        }
+
+    }
+
+    private void playAudio(){
+
+        if (mediaPlayer == null){
+            mediaState = mediaState.NOT_READY;
+            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.alian_welding);
+            mediaPlayer.setLooping(true);
+
+            mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                @Override
+                public void onPrepared(MediaPlayer mp) {
+                    mediaPlayer.start();
+                    mediaState = mediaState.PLAYING;
+
+                }
+
+            });
+
+        }else if(mediaState == MediaState.PAUSED){
+            mediaPlayer.start();
+            mediaState = mediaState.PLAYING;
+        }else if(mediaState == MediaState.STOPPED){
+            mediaPlayer.prepareAsync();
+        }
+    }
 
 
 
@@ -135,7 +157,7 @@ public class MainActivity extends AppCompatActivity {
                         //super.onBackPressed();
                         //Or used finish();
                         finish();
-                        mediaPlayer.stop();
+                        stopAudio();
                     }
 
                 })
@@ -143,6 +165,9 @@ public class MainActivity extends AppCompatActivity {
                 .show();
 
     }
+
+
+
 
 
 }
