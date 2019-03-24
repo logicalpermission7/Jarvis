@@ -52,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
         textViewRainBow.animateText(Messages2.get(position));
 
 
+
+
         /* Change Messages every 5 Seconds */
         handler = new Handler();
         handler.postDelayed(new Runnable(){
@@ -77,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
                 MyBounceInterpolator interpolator = new MyBounceInterpolator(0.5, 30);
                 myAnim.setInterpolator(interpolator);
                 startButton.startAnimation(myAnim);
-                stopAudio();
+                mediaPlayer.stop();
                 jarvis();
 
             }
@@ -107,6 +109,8 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+
+
 
     private void playAudio(){
 

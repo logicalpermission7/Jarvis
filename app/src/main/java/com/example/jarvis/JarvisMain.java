@@ -2,6 +2,7 @@ package com.example.jarvis;
 
 
 import android.content.DialogInterface;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AlertDialog;
@@ -21,6 +22,10 @@ public class JarvisMain extends AppCompatActivity {
     private SeekBar mSeekBarPitch;
     private SeekBar mSeekBarSpeed;
     private Button mButtonSpeak;
+
+
+    MediaPlayer mediaPlayer = new MediaPlayer();
+
 
 
 
@@ -99,6 +104,7 @@ public class JarvisMain extends AppCompatActivity {
                         //super.onBackPressed();
                         //Or used finish();
                         finish();
+                        mediaPlayer.isPlaying();
 
                     }
 
