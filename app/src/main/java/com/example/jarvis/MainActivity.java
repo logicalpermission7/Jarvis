@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (mediaPlayer == null){
             mediaState = mediaState.NOT_READY;
-            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.computer);
+            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.alian_welding);
             mediaPlayer.setLooping(true);
 
             mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
