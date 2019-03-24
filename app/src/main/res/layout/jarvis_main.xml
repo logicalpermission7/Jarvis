@@ -39,16 +39,30 @@
         android:progress="50"
         android:layout_marginBottom="16dp"/>
 
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
     <Button
         android:id="@+id/button_speak"
         android:layout_width="88dp"
         android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:layout_gravity="center_horizontal"
+        android:layout_marginStart="140dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="107dp"
+        android:layout_marginEnd="151dp"
+        android:layout_marginRight="151dp"
         android:background="@drawable/button1"
         android:enabled="false" />
-<RelativeLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+
 
     <ImageView
         android:id="@+id/bg"
@@ -61,7 +75,7 @@
         android:layout_marginLeft="0dp"
         android:layout_marginBottom="0dp"
         android:scaleType="fitXY"
-        app:srcCompat="@drawable/space3" />
+        app:srcCompat="@drawable/earthfromspace" />
 
 
 </RelativeLayout>
