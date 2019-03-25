@@ -73,8 +73,8 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        final Button startButton = findViewById(R.id.english_button);
-        startButton.setOnClickListener(new View.OnClickListener(){
+        final Button englishButton = findViewById(R.id.english_button);
+        englishButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 final Animation myAnim = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.bounce);
@@ -116,6 +116,8 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
+
     private void playAudio(){
 
         if (mediaPlayer == null){
@@ -144,13 +146,16 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
     private void useJarvis(){
         Intent intent = new Intent(getApplicationContext(),
                 JarvisMain.class);
         startActivity(intent);
 
-
     }
+
+
+
 
 
     public void onBackPressed() {
@@ -171,8 +176,9 @@ public class MainActivity extends AppCompatActivity {
                 })
                 .setNegativeButton("No", null)
                 .show();
-
     }
+
+
 
 
 
