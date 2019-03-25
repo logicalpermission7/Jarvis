@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
                 //myAnim.setInterpolator(interpolator);
                 //startButton.startAnimation(myAnim);
                 mediaPlayer.stop();
-                jarvis();
+                useJarvis();
 
             }
         });
@@ -144,7 +144,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    private void jarvis(){
+    private void useJarvis(){
         Intent intent = new Intent(getApplicationContext(),
                 JarvisMain.class);
         startActivity(intent);
