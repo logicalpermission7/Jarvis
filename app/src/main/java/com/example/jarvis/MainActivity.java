@@ -19,13 +19,16 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
+
+
     //------------Media state class with four instances."NOT_READY", "PLAYING", "PAUSED" and "STOPPED"
     enum MediaState {NOT_READY, PLAYING, PAUSED, STOPPED}
 
 
     private MediaPlayer mediaPlayer;
     private MediaState mediaState;
-    private HTextView textViewTyper, textViewRainBow;
+    private HTextView textViewType, textViewRainBow;
     int delay = 5000; //milliseconds
     Handler handler;
     ArrayList<String> Messages1 = new ArrayList<>();
@@ -41,14 +44,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         playAudio();
 
-        textViewTyper= findViewById(R.id.textViewTyper);
+        textViewType= findViewById(R.id.textViewTyper);
         textViewRainBow= findViewById(R.id.textViewRainBow);
 
         Messages1.add("Hello World, You're Welcome!");
         Messages2.add("J.A.R.V.I.S.");
-        textViewTyper.animateText(Messages1.get(position));
+        textViewType.animateText(Messages1.get(position));
         textViewRainBow.animateText(Messages2.get(position));
 
 
@@ -63,22 +67,22 @@ public class MainActivity extends AppCompatActivity {
                 if(position>=Messages1.size())
                     position=0;
                 textViewRainBow.animateText(Messages2.get(position));
-                textViewTyper.animateText(Messages1.get(position));
+                textViewType.animateText(Messages1.get(position));
             }
         }, delay);
 
 
 
-        final Button startButton = findViewById(R.id.start_button);
+        final Button startButton = findViewById(R.id.english_button);
         startButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 final Animation myAnim = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.bounce);
 
-                // Use bounce interpolator with amplitude 0.2 and frequency 20
-                MyBounceInterpolator interpolator = new MyBounceInterpolator(0.5, 30);
-                myAnim.setInterpolator(interpolator);
-                startButton.startAnimation(myAnim);
+                //--- Use bounce interpolator with amplitude 0.2 and frequency 20----
+                //MyBounceInterpolator interpolator = new MyBounceInterpolator(0.5, 30);
+                //myAnim.setInterpolator(interpolator);
+                //startButton.startAnimation(myAnim);
                 mediaPlayer.stop();
                 jarvis();
 
