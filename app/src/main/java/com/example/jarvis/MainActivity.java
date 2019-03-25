@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    //------------Media state class with four instances."NOT_READY", "PLAYING", "PAUSED" and "STOPPED"
+    //--Media state class with four instances."NOT_READY", "PLAYING", "PAUSED" and "STOPPED"
     enum MediaState {NOT_READY, PLAYING, PAUSED, STOPPED}
 
 
@@ -77,15 +77,15 @@ public class MainActivity extends AppCompatActivity {
         englishButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                final Animation myAnim = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.bounce);
+                mediaPlayer.stop();
+                useJarvis();
+
+                //final Animation myAnim = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.bounce);
 
                 //--- Use bounce interpolator with amplitude 0.2 and frequency 20----
                 //MyBounceInterpolator interpolator = new MyBounceInterpolator(0.5, 30);
                 //myAnim.setInterpolator(interpolator);
                 //startButton.startAnimation(myAnim);
-                mediaPlayer.stop();
-                useJarvis();
-
             }
         });
 
