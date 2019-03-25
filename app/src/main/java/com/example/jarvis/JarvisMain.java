@@ -12,14 +12,11 @@ import android.widget.SeekBar;
 import android.widget.EditText;
 import android.widget.Button;
 import android.util.Log;
-
 import java.util.ArrayList;
 import java.util.Locale;
 import com.hanks.htextview.base.HTextView;
-import android.support.v7.app.AlertDialog;
 import android.os.Handler;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
+
 
 
 
@@ -28,7 +25,7 @@ public class JarvisMain extends AppCompatActivity {
     private EditText mEditText;
     private SeekBar mSeekBarPitch;
     private SeekBar mSeekBarSpeed;
-    private Button mButtonSpeak;
+    private Button speakButton;
 
 
 
@@ -51,7 +48,7 @@ public class JarvisMain extends AppCompatActivity {
 
 
         textViewType= findViewById(R.id.textViewTyper2);
-        mButtonSpeak = findViewById(R.id.button_speak);
+        speakButton = findViewById(R.id.button_speak);
 
         Messages1.add("TEXT THEN CLICK THE BUTTON");
         textViewType.animateText(Messages1.get(position));
@@ -69,9 +66,6 @@ public class JarvisMain extends AppCompatActivity {
         }, delay);
 
 
-
-
-
         mTTS = new TextToSpeech(this, new TextToSpeech.OnInitListener() {
             @Override
             public void onInit(int status) {
@@ -81,7 +75,7 @@ public class JarvisMain extends AppCompatActivity {
                     if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED){
                         Log.e("TTS", "Language not supported");
                     }else{
-                        mButtonSpeak.setEnabled(true);
+                        speakButton.setEnabled(true);
                     }
                 }else{
                     Log.e("TTS", "Initialization failed");
@@ -93,13 +87,17 @@ public class JarvisMain extends AppCompatActivity {
         mSeekBarPitch = findViewById(R.id.seek_bar_pitch);
         mSeekBarSpeed = findViewById(R.id.seek_bar_speed);
 
-        mButtonSpeak.setOnClickListener(new View.OnClickListener() {
+        speakButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 speak();
             }
         });
     }
+
+
+
+
 
     private void speak(){
         String text = mEditText.getText().toString();
@@ -115,6 +113,10 @@ public class JarvisMain extends AppCompatActivity {
         mTTS.speak(text, TextToSpeech.QUEUE_FLUSH, null);
     }
 
+
+
+
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
@@ -124,6 +126,9 @@ public class JarvisMain extends AppCompatActivity {
         }
 
     }
+
+
+
 
 
 
