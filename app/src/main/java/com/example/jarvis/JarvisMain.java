@@ -50,7 +50,7 @@ public class JarvisMain extends AppCompatActivity {
         textViewType= findViewById(R.id.textViewTyper2);
         speakButton = findViewById(R.id.button_speak);
 
-        Messages1.add("TEXT THEN CLICK THE BUTTON");
+        Messages1.add("TEXT, THEN CLICK THE BUTTON.");
         textViewType.animateText(Messages1.get(position));
 
         /* Change Messages every 5 Seconds */
