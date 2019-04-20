@@ -1,12 +1,9 @@
 package com.example.jarvis;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
-import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -27,7 +24,6 @@ public class ListDataActivity extends AppCompatActivity {
     private static final String TAG = "ListDataActivity";
 
     DatabaseHelper mDatabaseHelper;
-    MediaPlayer mediaPlayer = new MediaPlayer();
 
     private ListView mListView;
 
@@ -90,27 +86,6 @@ public class ListDataActivity extends AppCompatActivity {
         Toast.makeText(this,message, Toast.LENGTH_SHORT).show();
     }
 
-    public void onBackPressed() {
-        new AlertDialog.Builder(this)
-                .setIcon(android.R.drawable.ic_dialog_alert)
-                .setTitle("Exit App")
-                .setMessage("Are you sure you want to go back to menu")
-                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-
-                        //super.onBackPressed();
-                        //Or used finish();
-                        finish();
-                        mediaPlayer.isPlaying();
-
-                    }
-
-                })
-                .setNegativeButton("No", null)
-                .show();
-
-    }
 
 
 
