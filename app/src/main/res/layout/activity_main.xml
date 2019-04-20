@@ -27,7 +27,7 @@
         app:srcCompat="@drawable/earth" />
 
     <Button
-        android:id="@+id/about_button"
+        android:id="@+id/DB_button"
         android:layout_width="139dp"
         android:layout_height="130dp"
         android:layout_alignParentStart="true"
@@ -39,6 +39,7 @@
         android:layout_marginTop="152dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/r_side_buttons"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
         android:textColor="#000"
         app:layout_constraintBottom_toBottomOf="@+id/bg"
         app:layout_constraintEnd_toEndOf="parent"
@@ -95,7 +96,7 @@
         app:layout_constraintVertical_bias="0.585" />
 
     <Button
-        android:id="@+id/extra_button"
+        android:id="@+id/about_button"
         android:layout_width="139dp"
         android:layout_height="130dp"
         android:layout_alignParentStart="true"
@@ -109,7 +110,7 @@
         android:layout_marginRight="50dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/fbutton"
-        android:text="              EX"
+        android:text="              AB"
         android:textColor="#000"
         app:layout_constraintBottom_toBottomOf="@+id/bg"
         app:layout_constraintEnd_toEndOf="parent"
@@ -169,24 +170,6 @@
 
     </RelativeLayout>
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="334dp"
-        android:layout_height="62dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="       Breaking down a communication barrier that can inhibit the lives of many."
-        android:textSize="18sp"
-        android:textColor="#4dffff"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.272" />
 
 
 </android.support.constraint.ConstraintLayout>
