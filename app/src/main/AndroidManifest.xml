@@ -19,6 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".JarvisMain"/>
+        <activity android:name=".DatabaseMain"/>
     </application>
 
 </manifest>
