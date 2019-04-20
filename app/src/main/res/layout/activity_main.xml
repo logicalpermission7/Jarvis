@@ -38,7 +38,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginTop="152dp"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/r_side_buttons"
+        android:background="@drawable/database"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
         android:textColor="#000"
         app:layout_constraintBottom_toBottomOf="@+id/bg"
