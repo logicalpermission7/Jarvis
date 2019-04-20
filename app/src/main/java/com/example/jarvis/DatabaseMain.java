@@ -23,7 +23,7 @@ public class DatabaseMain extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.database_main);
         editText = (EditText) findViewById(R.id.editText);
         btnAdd = (Button) findViewById(R.id.btnAdd);
         btnViewData = (Button) findViewById(R.id.btnView);
