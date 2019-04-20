@@ -20,6 +20,8 @@
         </activity>
         <activity android:name=".JarvisMain"/>
         <activity android:name=".DatabaseMain"/>
+        <activity android:name=".EditDataActivity"/>
+        <activity android:name=".ListDataActivity"/>
     </application>
 
 </manifest>
