@@ -27,6 +27,25 @@
         app:srcCompat="@drawable/earth" />
 
     <Button
+        android:id="@+id/about_button"
+        android:layout_width="139dp"
+        android:layout_height="130dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="152dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/r_side_buttons"
+        android:textColor="#000"
+        app:layout_constraintBottom_toBottomOf="@+id/bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.836" />
+
+    <Button
         android:id="@+id/english_button"
         android:layout_width="139dp"
         android:layout_height="130dp"
