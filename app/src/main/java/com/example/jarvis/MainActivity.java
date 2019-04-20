@@ -89,6 +89,43 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+
+        final Button databaseButton = findViewById(R.id.DB_button);
+        databaseButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                mediaPlayer.stop();
+                dataBase();
+
+                //final Animation myAnim = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.bounce);
+
+                //--- Use bounce interpolator with amplitude 0.2 and frequency 20----
+                //MyBounceInterpolator interpolator = new MyBounceInterpolator(0.5, 30);
+                //myAnim.setInterpolator(interpolator);
+                //startButton.startAnimation(myAnim);
+            }
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 
 
@@ -150,6 +187,13 @@ public class MainActivity extends AppCompatActivity {
     private void useJarvis(){
         Intent intent = new Intent(getApplicationContext(),
                 JarvisMain.class);
+        startActivity(intent);
+
+    }
+
+    private void dataBase(){
+        Intent intent = new Intent(getApplicationContext(),
+                DatabaseMain.class);
         startActivity(intent);
 
     }
