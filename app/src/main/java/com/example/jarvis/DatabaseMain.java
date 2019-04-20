@@ -1,6 +1,9 @@
 package com.example.jarvis;
 
+import android.content.DialogInterface;
+import android.media.MediaPlayer;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,6 +14,7 @@ import android.widget.Toast;
 public class DatabaseMain extends AppCompatActivity {
 
     private static final String TAG = "DatabaseMain";
+    MediaPlayer mediaPlayer = new MediaPlayer();
 
     DatabaseHelper mDatabaseHelper;
     private Button btnAdd, btnViewData;
@@ -66,4 +70,38 @@ public class DatabaseMain extends AppCompatActivity {
     private void toastMessage(String message){
         Toast.makeText(this,message, Toast.LENGTH_SHORT).show();
     }
+
+
+    public void onBackPressed() {
+        new AlertDialog.Builder(this)
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .setTitle("Exit App")
+                .setMessage("Are you sure you want to go back to menu")
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                        //super.onBackPressed();
+                        //Or used finish();
+                        finish();
+                        mediaPlayer.isPlaying();
+
+                    }
+
+                })
+                .setNegativeButton("No", null)
+                .show();
+
+    }
+
+
+
+
+
+
+
+
+
+
+
 }
