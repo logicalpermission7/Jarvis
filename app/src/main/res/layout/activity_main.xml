@@ -41,7 +41,7 @@
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:layout_marginBottom="8dp"
-        android:background="@drawable/r_side_buttons"
+        android:background="@drawable/data_button"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
         android:textColor="#000"
         app:layout_constraintBottom_toBottomOf="@+id/bg"
