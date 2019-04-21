@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
+    android:background="#000"
     android:layout_height="match_parent">
 
 
@@ -20,22 +21,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:weightSum="100"
-        android:layout_below="@+id/editable_item"
-        >
+        android:layout_below="@+id/editable_item">
 
         <Button
+            android:id="@+id/btnDelete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="DELETE"
-            android:id="@+id/btnDelete"/>
+            android:background="@android:color/holo_blue_bright"
+            android:textColor="#000"
+            android:text="DELETE" />
+
         <Button
+            android:id="@+id/btnSave"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="SAVE"
             android:layout_toRightOf="@+id/btnDelete"
-            android:id="@+id/btnSave"/>
+            android:background="@color/colorAccent"
+            android:textColor="#000"
+            android:text="SAVE" />
 
     </LinearLayout>
 
