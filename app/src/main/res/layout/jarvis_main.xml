@@ -61,7 +61,7 @@
             android:layout_marginBottom="301dp"
             android:gravity="center"
             android:text=""
-            android:textColor="#4dffff"
+            android:textColor="#FF6700"
             android:textSize="18sp"
             app:charIncrease="3"
             app:layout_constraintBottom_toBottomOf="parent"
