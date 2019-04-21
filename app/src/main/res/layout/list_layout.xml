@@ -6,8 +6,19 @@
     android:layout_height="match_parent">
 
     <ListView
+        android:id="@+id/listView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#000"
-        android:id="@+id/listView"/>
+        android:layout_height="501dp"
+        android:background="#000" >
+
+    </ListView>
+
+    <Button
+        android:id="@+id/goBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/holo_orange_dark"
+        android:text="GO BACK"
+        android:textColor="#000" />
 </LinearLayout>
