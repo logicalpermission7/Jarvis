@@ -18,7 +18,7 @@ public class EditDataActivity extends AppCompatActivity {
 
     private static final String TAG = "EditDataActivity";
 
-    private Button btnSave,btnDelete;
+    private Button btnSave,btnDelete,btnBack;
     private EditText editable_item;
 
     DatabaseHelper mDatabaseHelper;
@@ -32,6 +32,7 @@ public class EditDataActivity extends AppCompatActivity {
         setContentView(R.layout.edit_data);
         btnSave = (Button) findViewById(R.id.btnSave);
         btnDelete = (Button) findViewById(R.id.btnDelete);
+        btnBack = (Button) findViewById(R.id.btnBack);
         editable_item = (EditText) findViewById(R.id.editable_item);
         mDatabaseHelper = new DatabaseHelper(this);
 
@@ -68,6 +69,18 @@ public class EditDataActivity extends AppCompatActivity {
             }
         });
 
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               mainActivity();
+            }
+        });
+
+
+
+
+
+
     }
 
     /**
@@ -78,6 +91,14 @@ public class EditDataActivity extends AppCompatActivity {
         Toast.makeText(this,message, Toast.LENGTH_SHORT).show();
     }
 
+
+
+    private void mainActivity(){
+        Intent intent = new Intent(getApplicationContext(),
+                MainActivity.class);
+        startActivity(intent);
+
+    }
 
 
 
