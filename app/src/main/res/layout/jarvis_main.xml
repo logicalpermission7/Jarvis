@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:padding="16dp"
     android:background="#000000"
     android:layout_height="match_parent">
@@ -40,44 +42,21 @@
         android:layout_marginBottom="16dp"/>
 
 
-    <Button
-        android:id="@+id/button_speak"
-        android:layout_width="73dp"
-        android:layout_height="75dp"
-        android:layout_centerHorizontal="true"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginStart="140dp"
-        android:layout_marginLeft="140dp"
-        android:layout_marginTop="45dp"
-        android:layout_marginEnd="151dp"
-        android:layout_marginRight="151dp"
-        android:background="@drawable/speak"
-        android:enabled="false" />
-
     <RelativeLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+        android:layout_width="401dp"
+        android:layout_height="190dp">
 
-
-        <ImageView
-            android:id="@+id/bg"
-            android:layout_width="367dp"
-            android:layout_height="match_parent"
-            android:layout_marginStart="0dp"
-            android:layout_marginLeft="0dp"
-            android:layout_marginTop="0dp"
-            android:layout_marginBottom="0dp"
-            android:scaleType="fitXY"
-            app:srcCompat="@drawable/earthfromspace" />
 
         <com.hanks.htextview.typer.TyperTextView
             android:id="@+id/textViewTyper2"
-            android:layout_width="223dp"
-            android:layout_height="51dp"
+            android:layout_width="197dp"
+            android:layout_height="63dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
             android:layout_marginStart="69dp"
             android:layout_marginLeft="69dp"
-            android:layout_marginEnd="86dp"
-            android:layout_marginRight="86dp"
+            android:layout_marginEnd="17dp"
+            android:layout_marginRight="17dp"
             android:layout_marginBottom="301dp"
             android:gravity="center"
             android:text=""
@@ -89,6 +68,19 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:typerSpeed="80" />
+
+        <Button
+            android:id="@+id/button_speak"
+            android:layout_width="176dp"
+            android:layout_height="58dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="52dp"
+            android:background="@drawable/submit"
+            android:enabled="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.452"
+            app:layout_constraintStart_toStartOf="parent" />
     </RelativeLayout>
 
 
