@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -26,12 +27,14 @@ public class ListDataActivity extends AppCompatActivity {
     DatabaseHelper mDatabaseHelper;
 
     private ListView mListView;
+    private Button btnBack;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_layout);
         mListView = (ListView) findViewById(R.id.listView);
+        btnBack = (Button) findViewById(R.id.goBack);
         mDatabaseHelper = new DatabaseHelper(this);
 
         populateListView();
@@ -76,6 +79,19 @@ public class ListDataActivity extends AppCompatActivity {
                 }
             }
         });
+
+
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mainActivity();
+            }
+        });
+
+
+
+
+
     }
 
     /**
@@ -86,7 +102,12 @@ public class ListDataActivity extends AppCompatActivity {
         Toast.makeText(this,message, Toast.LENGTH_SHORT).show();
     }
 
+    private void mainActivity(){
+        Intent intent = new Intent(getApplicationContext(),
+                MainActivity.class);
+        startActivity(intent);
 
+    }
 
 
 
