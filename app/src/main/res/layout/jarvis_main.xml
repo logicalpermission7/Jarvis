@@ -55,8 +55,8 @@
             android:layout_alignParentRight="true"
             android:layout_marginStart="69dp"
             android:layout_marginLeft="69dp"
-            android:layout_marginEnd="17dp"
-            android:layout_marginRight="17dp"
+            android:layout_marginEnd="54dp"
+            android:layout_marginRight="54dp"
             android:layout_marginBottom="301dp"
             android:gravity="center"
             android:text=""
@@ -71,8 +71,8 @@
 
         <Button
             android:id="@+id/button_speak"
-            android:layout_width="176dp"
-            android:layout_height="58dp"
+            android:layout_width="144dp"
+            android:layout_height="53dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="52dp"
             android:background="@drawable/submit"
