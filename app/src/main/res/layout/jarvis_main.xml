@@ -8,6 +8,12 @@
     android:background="#000000"
     android:layout_height="match_parent">
 
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/footer" />
+
     <EditText
         android:id="@+id/edit_text"
         android:layout_width="match_parent"
