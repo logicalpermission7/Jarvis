@@ -167,7 +167,7 @@ public class MainActivity extends AppCompatActivity {
         new AlertDialog.Builder(this)
                 .setIcon(android.R.drawable.ic_dialog_alert)
                 .setTitle("Exit App")
-                .setMessage("Are you sure you want to exit jarvis?")
+                .setMessage("Are you sure you want to exit M.A.R.S.?")
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
