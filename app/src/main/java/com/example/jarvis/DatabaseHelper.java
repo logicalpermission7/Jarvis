@@ -3,7 +3,6 @@ package com.example.jarvis;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
-import android.database.DatabaseErrorHandler;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
@@ -16,9 +15,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     private static final String TAG = "DatabaseHelper";
 
-    private static final String TABLE_NAME = "people_table";
+    private static final String TABLE_NAME = "note_table";
     private static final String COL1 = "ID";
-    private static final String COL2 = "name";
+    private static final String COL2 = "note";
 
 
     public DatabaseHelper(Context context) {
@@ -34,7 +33,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
-        db.execSQL("DROP IF TABLE EXISTS " + TABLE_NAME);
+        db.execSQL("DROP TABLE " + TABLE_NAME);
         onCreate(db);
     }
 

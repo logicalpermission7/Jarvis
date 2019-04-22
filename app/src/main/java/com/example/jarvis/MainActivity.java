@@ -1,12 +1,9 @@
 package com.example.jarvis;
 
 import android.support.v7.app.AppCompatActivity;
-import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.content.Intent;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import com.hanks.htextview.base.HTextView;
 import java.util.ArrayList;
@@ -22,12 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    //--Media state class with four instances."NOT_READY", "PLAYING", "PAUSED" and "STOPPED"
-    enum MediaState {NOT_READY, PLAYING, PAUSED, STOPPED}
 
-
-    private MediaPlayer mediaPlayer;
-    private MediaState mediaState;
     private HTextView textViewType, textViewRainBow;
     int delay = 5000; //milliseconds
     Handler handler;
@@ -44,8 +36,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-        playAudio();
 
         textViewType= findViewById(R.id.textViewTyper);
         textViewRainBow= findViewById(R.id.textViewRainBow);
@@ -77,15 +67,8 @@ public class MainActivity extends AppCompatActivity {
         englishButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                mediaPlayer.stop();
                 useJarvis();
 
-                //final Animation myAnim = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.bounce);
-
-                //--- Use bounce interpolator with amplitude 0.2 and frequency 20----
-                //MyBounceInterpolator interpolator = new MyBounceInterpolator(0.5, 30);
-                //myAnim.setInterpolator(interpolator);
-                //startButton.startAnimation(myAnim);
             }
         });
 
@@ -95,40 +78,18 @@ public class MainActivity extends AppCompatActivity {
         databaseButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                mediaPlayer.stop();
+
                 dataBase();
 
-                //final Animation myAnim = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.bounce);
 
-                //--- Use bounce interpolator with amplitude 0.2 and frequency 20----
-                //MyBounceInterpolator interpolator = new MyBounceInterpolator(0.5, 30);
-                //myAnim.setInterpolator(interpolator);
-                //startButton.startAnimation(myAnim);
             }
         });
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 
-
+/*
     @Override
     protected void onPause() {
         super.onPause();
@@ -151,9 +112,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+*/
 
-
-
+/*
 
     private void playAudio(){
 
@@ -179,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
             mediaPlayer.prepareAsync();
         }
     }
-
+*/
 
 
 
@@ -214,7 +175,6 @@ public class MainActivity extends AppCompatActivity {
                         //super.onBackPressed();
                         //Or used finish();
                         finish();
-                        stopAudio();
                     }
 
                 })

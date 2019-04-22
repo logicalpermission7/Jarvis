@@ -1,7 +1,6 @@
 package com.example.jarvis;
 
 import android.content.DialogInterface;
-import android.media.MediaPlayer;
 import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -14,7 +13,6 @@ import android.widget.Toast;
 public class DatabaseMain extends AppCompatActivity {
 
     private static final String TAG = "DatabaseMain";
-    MediaPlayer mediaPlayer = new MediaPlayer();
 
     DatabaseHelper mDatabaseHelper;
     private Button btnAdd, btnViewData;
@@ -37,7 +35,7 @@ public class DatabaseMain extends AppCompatActivity {
                     AddData(newEntry);
                     editText.setText("");
                 } else {
-                    toastMessage("You must put something in the text field!");
+                    toastMessage("You must add some data first!");
                 }
 
             }
@@ -84,7 +82,6 @@ public class DatabaseMain extends AppCompatActivity {
                         //super.onBackPressed();
                         //Or used finish();
                         finish();
-                        mediaPlayer.isPlaying();
 
                     }
 
