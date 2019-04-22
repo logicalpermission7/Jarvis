@@ -40,8 +40,8 @@ public class MainActivity extends AppCompatActivity {
         textViewType= findViewById(R.id.textViewTyper);
         textViewRainBow= findViewById(R.id.textViewRainBow);
 
-        Messages1.add("Hello World, You're Welcome!");
-        Messages2.add("J.A.R.V.I.S.");
+        Messages1.add("Monitoring, Analysis and Response System");
+        Messages2.add("M.A.R.S.");
         textViewType.animateText(Messages1.get(position));
         textViewRainBow.animateText(Messages2.get(position));
 
