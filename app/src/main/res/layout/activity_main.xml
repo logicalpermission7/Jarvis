@@ -25,7 +25,7 @@
         app:layout_constraintStart_toStartOf="@+id/relativeLayout"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/bg2" />
+        app:srcCompat="@drawable/cover" />
 
     <Button
         android:id="@+id/DB_button"
@@ -99,23 +99,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.978" />
-
-    <ImageView
-        android:id="@+id/backdrop"
-        android:layout_width="412dp"
-        android:layout_height="507dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginRight="1dp"
-        android:background="#08160606"
-        android:rotation="180"
-        android:rotationX="360"
-        app:layout_constraintBottom_toTopOf="@+id/bg"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.455"
-        app:srcCompat="@drawable/black" />
 
     <com.hanks.htextview.typer.TyperTextView
         android:id="@+id/textViewTyper"
