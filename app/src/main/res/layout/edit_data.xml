@@ -31,7 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:background="@android:color/holo_blue_bright"
+            android:background="#FF0000"
             android:textColor="#000"
             android:text="DELETE" />
 
@@ -41,7 +41,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_toRightOf="@+id/btnDelete"
-            android:background="@color/colorAccent"
+            android:background="#4dffff"
             android:textColor="#000"
             android:text="SAVE" />
 
