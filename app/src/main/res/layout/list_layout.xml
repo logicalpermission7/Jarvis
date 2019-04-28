@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:background="@android:color/holo_orange_dark"
-        android:text="GO BACK"
+        android:text="GO HOME"
         android:textColor="#000" />
 
 </LinearLayout>
