@@ -51,7 +51,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@android:color/holo_orange_dark"
-            android:text="BACK"
+            android:text="HOME"
             android:textColor="#000" />
 
     </LinearLayout>
