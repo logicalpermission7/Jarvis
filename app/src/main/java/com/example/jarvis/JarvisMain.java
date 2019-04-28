@@ -25,6 +25,7 @@ public class JarvisMain extends AppCompatActivity {
     private SeekBar mSeekBarPitch;
     private SeekBar mSeekBarSpeed;
     private Button speakButton;
+    private Button clearButton;
 
 
 
@@ -47,6 +48,7 @@ public class JarvisMain extends AppCompatActivity {
 
         textViewType= findViewById(R.id.textViewTyper2);
         speakButton = findViewById(R.id.button_speak);
+        clearButton = findViewById(R.id.clearButton);
 
         Messages1.add("TEXT, THEN SEND");
         textViewType.animateText(Messages1.get(position));
@@ -91,6 +93,16 @@ public class JarvisMain extends AppCompatActivity {
                 speak();
             }
         });
+
+        clearButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                clear();
+            }
+        });
+
+
+
     }
 
 
@@ -111,6 +123,10 @@ public class JarvisMain extends AppCompatActivity {
         mTTS.speak(text, TextToSpeech.QUEUE_FLUSH, null);
     }
 
+
+    private void clear(){
+        mEditText.setText("");
+    }
 
 
 
