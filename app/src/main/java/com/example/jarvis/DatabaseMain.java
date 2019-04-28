@@ -15,7 +15,7 @@ public class DatabaseMain extends AppCompatActivity {
     private static final String TAG = "DatabaseMain";
 
     DatabaseHelper mDatabaseHelper;
-    private Button btnAdd, btnViewData;
+    private Button btnAdd, btnViewData, btnBack;
     private EditText editText;
 
     @Override
@@ -24,6 +24,7 @@ public class DatabaseMain extends AppCompatActivity {
         setContentView(R.layout.database_main);
         editText = (EditText) findViewById(R.id.editText);
         btnAdd = (Button) findViewById(R.id.btnAdd);
+        btnBack = findViewById(R.id.btnBack);
         btnViewData = (Button) findViewById(R.id.btnView);
         mDatabaseHelper = new DatabaseHelper(this);
 
@@ -48,6 +49,16 @@ public class DatabaseMain extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {mainActivity();
+            }
+        });
+
+
+
 
     }
 
@@ -93,7 +104,12 @@ public class DatabaseMain extends AppCompatActivity {
 
 
 
+    private void mainActivity(){
+        Intent intent = new Intent(getApplicationContext(),
+                MainActivity.class);
+        startActivity(intent);
 
+    }
 
 
 
