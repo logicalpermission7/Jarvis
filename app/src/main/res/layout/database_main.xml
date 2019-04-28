@@ -46,6 +46,8 @@
             android:text="TAP IN THE WHITE BOX TO START ADDING TEXT."
             android:textColor="#fff" />
 
+
+
         <Button
             android:id="@+id/btnAdd"
             android:layout_width="wrap_content"
@@ -73,21 +75,8 @@
 
     </RelativeLayout>
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="352dp"
-        android:layout_height="317dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="31dp"
-        android:layout_marginLeft="31dp"
-        android:layout_marginTop="83dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginRight="28dp"
-        android:layout_marginBottom="12dp"
-        app:srcCompat="@drawable/signlanguage" />
+
+
+
 
 </RelativeLayout>
