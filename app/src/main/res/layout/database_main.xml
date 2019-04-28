@@ -19,7 +19,7 @@
             android:layout_marginTop="2dp"
             android:textAlignment="center"
             android:background="#006400"
-            android:textColor="#000" />
+            android:textColor="#fff" />
     </RelativeLayout>
 
     <RelativeLayout
