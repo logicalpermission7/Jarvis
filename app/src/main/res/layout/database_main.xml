@@ -57,7 +57,7 @@
             android:layout_marginStart="51dp"
             android:layout_marginLeft="51dp"
             android:textColor="#000000"
-            android:background="@color/colorAccent"
+            android:background="#7CFC00"
             android:text="ADD DATA" />
 
         <Button
