@@ -8,11 +8,12 @@
     android:background="#000000"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/imageView3"
+    <Button
+        android:id="@+id/clearButton"
         android:layout_width="match_parent"
-        android:layout_height="105dp"
-        app:srcCompat="@drawable/footer" />
+        android:layout_height="91dp"
+        android:background="@drawable/footer"
+        android:text="CLEAR TEXT HERE------>" />
 
     <EditText
         android:id="@+id/edit_text"
