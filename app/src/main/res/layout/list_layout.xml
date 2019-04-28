@@ -9,7 +9,7 @@
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
-        android:layout_height="578dp"
+        android:layout_height="590dp"
         android:background="#006400">
 
     </ListView>
