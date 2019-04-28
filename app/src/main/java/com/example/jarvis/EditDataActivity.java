@@ -71,8 +71,7 @@ public class EditDataActivity extends AppCompatActivity {
 
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-               mainActivity();
+            public void onClick(View view) {mainActivity();
             }
         });
 
