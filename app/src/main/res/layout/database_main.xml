@@ -18,7 +18,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginTop="2dp"
             android:textAlignment="center"
-            android:background="#fff"
+            android:background="#006400"
             android:textColor="#000" />
     </RelativeLayout>
 
