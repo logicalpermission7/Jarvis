@@ -109,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
 
             // must be done after the call to show();
             // allows anchor tags to work
-            TextView tv = (TextView) dialog.findViewById(android.R.id.message);
+            TextView tv = dialog.findViewById(android.R.id.message);
             tv.setMovementMethod(LinkMovementMethod.getInstance());
         }
     }
