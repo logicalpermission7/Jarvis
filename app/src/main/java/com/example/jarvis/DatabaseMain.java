@@ -22,11 +22,16 @@ public class DatabaseMain extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.database_main);
-        editText = (EditText) findViewById(R.id.editText);
-        btnAdd = (Button) findViewById(R.id.btnAdd);
+        editText = findViewById(R.id.editText);
+        btnAdd = findViewById(R.id.btnAdd);
         btnBack = findViewById(R.id.btnBack);
-        btnViewData = (Button) findViewById(R.id.btnView);
+        btnViewData = findViewById(R.id.btnView);
         mDatabaseHelper = new DatabaseHelper(this);
+
+
+
+
+
 
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,6 +47,11 @@ public class DatabaseMain extends AppCompatActivity {
             }
         });
 
+
+
+
+
+
         btnViewData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,6 +59,10 @@ public class DatabaseMain extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
+
+
 
 
         btnBack.setOnClickListener(new View.OnClickListener() {
@@ -61,6 +75,9 @@ public class DatabaseMain extends AppCompatActivity {
 
 
     }
+
+
+
 
     public void AddData(String newEntry) {
         boolean insertData = mDatabaseHelper.addData(newEntry);
@@ -79,6 +96,13 @@ public class DatabaseMain extends AppCompatActivity {
     private void toastMessage(String message){
         Toast.makeText(this,message, Toast.LENGTH_SHORT).show();
     }
+
+
+
+
+
+
+
 
 
     public void onBackPressed() {
