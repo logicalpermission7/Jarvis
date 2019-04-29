@@ -40,8 +40,6 @@ public class MainActivity extends AppCompatActivity {
         textViewRainBow.animateText(Messages2.get(position));
 
 
-
-
         /* Change subtitle Messages in main menu every 5 Seconds */
         handler = new Handler();
         handler.postDelayed(new Runnable(){
@@ -87,8 +85,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-
     class AboutListener implements View.OnClickListener {
         @Override
         public void onClick(View v) {
@@ -118,9 +114,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-
-
+    
 
     private void useJarvis(){
         Intent intent = new Intent(getApplicationContext(),
