@@ -26,9 +26,6 @@ public class JarvisMain extends AppCompatActivity {
     private SeekBar mSeekBarSpeed;
     private Button speakButton;
     private Button clearButton;
-
-
-
     private HTextView textViewType;
     int delay = 5000; //milliseconds
     Handler handler;
@@ -49,9 +46,16 @@ public class JarvisMain extends AppCompatActivity {
         textViewType= findViewById(R.id.textViewTyper2);
         speakButton = findViewById(R.id.button_speak);
         clearButton = findViewById(R.id.clearButton);
-
+        mEditText = findViewById(R.id.edit_text);
+        mSeekBarPitch = findViewById(R.id.seek_bar_pitch);
+        mSeekBarSpeed = findViewById(R.id.seek_bar_speed);
         Messages1.add("TEXT, THEN SEND");
         textViewType.animateText(Messages1.get(position));
+
+
+
+
+
 
         /* Change Messages every 5 Seconds */
         handler = new Handler();
@@ -64,6 +68,10 @@ public class JarvisMain extends AppCompatActivity {
                 textViewType.animateText(Messages1.get(position));
             }
         }, delay);
+
+
+
+
 
 
         mTTS = new TextToSpeech(this, new TextToSpeech.OnInitListener() {
@@ -83,9 +91,6 @@ public class JarvisMain extends AppCompatActivity {
             }
         });
 
-        mEditText = findViewById(R.id.edit_text);
-        mSeekBarPitch = findViewById(R.id.seek_bar_pitch);
-        mSeekBarSpeed = findViewById(R.id.seek_bar_speed);
 
 
 
@@ -144,7 +149,6 @@ public class JarvisMain extends AppCompatActivity {
         }
 
     }
-
 
 
 
