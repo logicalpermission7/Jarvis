@@ -54,26 +54,6 @@ public class JarvisMain extends AppCompatActivity {
 
 
 
-
-
-
-        /* Change Messages every 5 Seconds */
-        handler = new Handler();
-        handler.postDelayed(new Runnable(){
-            public void run(){
-
-                handler.postDelayed(this, delay);
-                if(position>=Messages1.size())
-                    position=0;
-                textViewType.animateText(Messages1.get(position));
-            }
-        }, delay);
-
-
-
-
-
-
         mTTS = new TextToSpeech(this, new TextToSpeech.OnInitListener() {
             @Override
             public void onInit(int status) {
@@ -93,6 +73,27 @@ public class JarvisMain extends AppCompatActivity {
 
 
 
+
+
+
+
+
+
+        /* Change Messages every 5 Seconds */
+        handler = new Handler();
+        handler.postDelayed(new Runnable(){
+            public void run(){
+
+                handler.postDelayed(this, delay);
+                if(position>=Messages1.size())
+                    position=0;
+                textViewType.animateText(Messages1.get(position));
+            }
+        }, delay);
+
+
+
+        
 
 
         speakButton.setOnClickListener(new View.OnClickListener() {
