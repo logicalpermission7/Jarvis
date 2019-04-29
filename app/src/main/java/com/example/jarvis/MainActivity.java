@@ -11,18 +11,11 @@ import android.os.Handler;
 import android.support.v7.app.AlertDialog;
 import android.content.DialogInterface;
 import android.text.Html;
-import android.net.Uri;
 import android.text.method.LinkMovementMethod;
 import android.widget.TextView;
 
 
 public class MainActivity extends AppCompatActivity {
-
-
-
-
-
-
 
     private HTextView textViewType, textViewRainBow;
     int delay = 5000; //milliseconds
@@ -30,9 +23,6 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<String> Messages1 = new ArrayList<>();
     ArrayList<String> Messages2 = new ArrayList<>();
     int position=0;
-
-
-
 
 
     @Override
@@ -52,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        /* Change Messages every 5 Seconds */
+        /* Change subtitle Messages in main menu every 5 Seconds */
         handler = new Handler();
         handler.postDelayed(new Runnable(){
             public void run(){
@@ -150,7 +140,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void onBackPressed() {
         new AlertDialog.Builder(this)
-                .setIcon(android.R.drawable.ic_dialog_alert)
                 .setTitle("Exit App")
                 .setMessage("Are you sure you want to exit M.A.R.S.?")
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
