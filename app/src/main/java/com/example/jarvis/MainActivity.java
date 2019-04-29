@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
                     "<h2>WELCOME TO M.A.R.S.</h2>" +
                     "<p>This application was originally designed as part of a final project for school. It was intended to be for the speech impaired, but has potential for something much more. Please leave us a note below at the link provided and give us some ideas.</p>" +
                     "<p><b>Lead Developer/Designer:</b> Elvis Bueno<br>" +
-                    "<b>programmer:</b> Michael Pender<br>" +
+                    "<b>Programmer 1:</b> Michael Pender<br>" +
                     "<b>Link: </b> <a href='https://www.spacex.com/'>source website</a><br>" +
                     "<b>School: </b>Austin Peay State University" +
                     "</p></html>";
