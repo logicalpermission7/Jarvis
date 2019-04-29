@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
                     "<p>This application was originally designed as part of a final project for school. It was intended to be for the speech impaired, but has potential for something much more. Please leave us a note below at the link provided and give us some ideas.</p>" +
                     "<p><b>Lead Developer/Designer:</b> Elvis Bueno<br>" +
                     "<b>Programmer 1:</b> Michael Pender<br>" +
-                    "<b>Link: </b> <a href='https://mailchi.mp/ddbd554650cd/mars'>give us some ideas</a><br>" +
+                    "<b>Link: </b> <a href='https://mailchi.mp/ddbd554650cd/mars'>Subscribe</a><br>" +
                     "<b>School: </b>Austin Peay State University" +
                     "</p></html>";
             AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext());
