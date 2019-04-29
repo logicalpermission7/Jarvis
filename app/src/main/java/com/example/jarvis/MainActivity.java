@@ -10,6 +10,10 @@ import java.util.ArrayList;
 import android.os.Handler;
 import android.support.v7.app.AlertDialog;
 import android.content.DialogInterface;
+import android.text.Html;
+import android.net.Uri;
+import android.text.method.LinkMovementMethod;
+import android.widget.TextView;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -36,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        findViewById(R.id.about_button).setOnClickListener(new AboutListener());
         textViewType= findViewById(R.id.textViewTyper);
         textViewRainBow= findViewById(R.id.textViewRainBow);
 
@@ -89,59 +93,30 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-/*
-    @Override
-    protected void onPause() {
-        super.onPause();
-        stopAudio();
-    }
+    class AboutListener implements View.OnClickListener {
+        @Override
+        public void onClick(View v) {
+            String message = "<html>" +
+                    "<h2>WELCOME TO M.A.R.S.</h2>" +
+                    "<p>This application was originally designed as part of a final project for school. It was intended to be for the speech impaired, but has potential for something much more. Please leave us a note below at the link provided and give us some ideas.</p>" +
+                    "<p><b>Lead Developer/Designer:</b> Elvis Bueno<br>" +
+                    "<b>programmer:</b> Michael Pender<br>" +
+                    "<b>Link: </b> <a href='https://www.spacex.com/'>source website</a><br>" +
+                    "<b>School: </b>Austin Peay State University" +
+                    "</p></html>";
+            AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext());
+            builder.setMessage(Html.fromHtml(message));
+            builder.setPositiveButton("Ok", null);
 
+            AlertDialog dialog = builder.create();
+            dialog.show();
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        playAudio();
-    }
-
-    private void stopAudio(){
-
-        if(mediaPlayer != null){
-            mediaPlayer.stop();
-            mediaState = mediaState.STOPPED;
-        }
-
-    }
-
-*/
-
-/*
-
-    private void playAudio(){
-
-        if (mediaPlayer == null){
-            mediaState = mediaState.NOT_READY;
-            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.alian_welding);
-            mediaPlayer.setLooping(true);
-
-            mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-                @Override
-                public void onPrepared(MediaPlayer mp) {
-                    mediaPlayer.start();
-                    mediaState = mediaState.PLAYING;
-
-                }
-
-            });
-
-        }else if(mediaState == MediaState.PAUSED){
-            mediaPlayer.start();
-            mediaState = mediaState.PLAYING;
-        }else if(mediaState == MediaState.STOPPED){
-            mediaPlayer.prepareAsync();
+            // must be done after the call to show();
+            // allows anchor tags to work
+            TextView tv = (TextView) dialog.findViewById(android.R.id.message);
+            tv.setMovementMethod(LinkMovementMethod.getInstance());
         }
     }
-*/
-
 
 
 
