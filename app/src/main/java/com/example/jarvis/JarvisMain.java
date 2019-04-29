@@ -164,7 +164,6 @@ public class JarvisMain extends AppCompatActivity {
 
     public void onBackPressed() {
         new AlertDialog.Builder(this)
-                .setIcon(android.R.drawable.ic_dialog_alert)
                 .setTitle("Exit App")
                 .setMessage("Are you sure you want to go back to menu")
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
