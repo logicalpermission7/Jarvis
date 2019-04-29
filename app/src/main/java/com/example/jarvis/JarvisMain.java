@@ -87,9 +87,13 @@ public class JarvisMain extends AppCompatActivity {
         mSeekBarPitch = findViewById(R.id.seek_bar_pitch);
         mSeekBarSpeed = findViewById(R.id.seek_bar_speed);
 
+
+
+
         speakButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 speak();
             }
         });
