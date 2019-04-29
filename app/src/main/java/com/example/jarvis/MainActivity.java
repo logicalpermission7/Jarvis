@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    
+
 
     private void useJarvis(){
         Intent intent = new Intent(getApplicationContext(),
