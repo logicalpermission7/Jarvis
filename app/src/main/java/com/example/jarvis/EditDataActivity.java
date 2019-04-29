@@ -17,12 +17,9 @@ import android.widget.Toast;
 public class EditDataActivity extends AppCompatActivity {
 
     private static final String TAG = "EditDataActivity";
-
     private Button btnSave,btnDelete,btnBack;
     private EditText editable_item;
-
     DatabaseHelper mDatabaseHelper;
-
     private String selectedName;
     private int selectedID;
 
@@ -30,10 +27,10 @@ public class EditDataActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.edit_data);
-        btnSave = (Button) findViewById(R.id.btnSave);
-        btnDelete = (Button) findViewById(R.id.btnDelete);
-        btnBack = (Button) findViewById(R.id.btnBack);
-        editable_item = (EditText) findViewById(R.id.editable_item);
+        btnSave = findViewById(R.id.btnSave);
+        btnDelete = findViewById(R.id.btnDelete);
+        btnBack = findViewById(R.id.btnBack);
+        editable_item = findViewById(R.id.editable_item);
         mDatabaseHelper = new DatabaseHelper(this);
 
         //get the intent extra from the ListDataActivity
@@ -48,6 +45,9 @@ public class EditDataActivity extends AppCompatActivity {
         //set the text to show the current selected name
         editable_item.setText(selectedName);
 
+
+
+
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -60,6 +60,10 @@ public class EditDataActivity extends AppCompatActivity {
             }
         });
 
+
+
+
+
         btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -69,15 +73,15 @@ public class EditDataActivity extends AppCompatActivity {
             }
         });
 
+
+
+
+
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {mainActivity();
             }
         });
-
-
-
-
 
 
     }
