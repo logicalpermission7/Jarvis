@@ -93,6 +93,12 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+
+
+
+
+
     class AboutListener implements View.OnClickListener {
         @Override
         public void onClick(View v) {
@@ -120,6 +126,12 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
+
+
+
+
+
     private void useJarvis(){
         Intent intent = new Intent(getApplicationContext(),
                 JarvisMain.class);
@@ -133,8 +145,6 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
 
     }
-
-
 
 
 
