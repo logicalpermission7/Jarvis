@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         /* Change subtitle Messages in main menu every 5 Seconds */
         handler = new Handler();
         handler.postDelayed(new Runnable(){
+
             public void run(){
 
                 handler.postDelayed(this, delay);
