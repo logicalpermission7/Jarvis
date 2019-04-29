@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     Handler handler;
     ArrayList<String> Messages1 = new ArrayList<>();
     ArrayList<String> Messages2 = new ArrayList<>();
-    int position=0;  //counter for changing text every 5 sec.
+    int position=0;  //counter for changing text every 5 sec. storing current position in position variable.
 
 
     @Override
