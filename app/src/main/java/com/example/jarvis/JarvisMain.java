@@ -133,7 +133,7 @@ public class JarvisMain extends AppCompatActivity {
         mTTS.speak(text, TextToSpeech.QUEUE_FLUSH, null);
     }
 
-
+//to clear text from the edit text widget
     private void clear(){
         mEditText.setText("");
     }
