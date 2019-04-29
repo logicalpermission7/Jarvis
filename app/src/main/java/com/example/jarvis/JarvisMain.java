@@ -139,7 +139,7 @@ public class JarvisMain extends AppCompatActivity {
     }
 
 
-
+// to stop the speech engine when the app stops
 
     @Override
     protected void onDestroy() {
