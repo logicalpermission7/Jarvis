@@ -93,7 +93,7 @@ public class JarvisMain extends AppCompatActivity {
 
 
 
-        
+
 
 
         speakButton.setOnClickListener(new View.OnClickListener() {
