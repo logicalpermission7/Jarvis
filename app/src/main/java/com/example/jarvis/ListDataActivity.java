@@ -34,12 +34,15 @@ public class ListDataActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_layout);
-        mListView = (ListView) findViewById(R.id.listView);
-        btnBack = (Button) findViewById(R.id.goBack);
+        mListView = findViewById(R.id.listView);
+        btnBack = findViewById(R.id.goBack);
         mDatabaseHelper = new DatabaseHelper(this);
 
         populateListView();
     }
+
+
+
 
     private void populateListView() {
         Log.d(TAG, "populateListView: Displaying data in the ListView.");
@@ -55,6 +58,12 @@ public class ListDataActivity extends AppCompatActivity {
         //create the list adapter and set the adapter
         ListAdapter adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, listData);
         mListView.setAdapter(adapter);
+
+
+
+
+
+
 
         //set an onItemClickListener to the ListView
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -90,9 +99,6 @@ public class ListDataActivity extends AppCompatActivity {
         });
 
 
-
-
-
     }
 
     /**
@@ -102,6 +108,11 @@ public class ListDataActivity extends AppCompatActivity {
     private void toastMessage(String message){
         Toast.makeText(this,message, Toast.LENGTH_SHORT).show();
     }
+
+
+
+
+
 
     private void mainActivity(){
         Intent intent = new Intent(getApplicationContext(),
